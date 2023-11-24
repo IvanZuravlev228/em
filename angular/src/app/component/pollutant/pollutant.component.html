@@ -1,0 +1,34 @@
+<div class="button-container">
+  <button class="show-button" (click)="getAllPollutant()">Show all pollutant</button>
+</div>
+
+<div class="table-container">
+  <table class="pollutant-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Min Mass</th>
+      <th>Max Mass</th>
+      <th>GDK</th>
+      <th>Danger Class</th>
+      <th>RFC</th>
+      <th>SF</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pollutant of pollutants">
+      <td>{{ pollutant.id }}</td>
+      <td class="name-column">{{ pollutant.name }}</td>
+      <td>{{ pollutant.minMass }}</td>
+      <td>{{ pollutant.maxMass }}</td>
+      <td>{{ pollutant.gdk }}</td>
+      <td>{{ pollutant.dangerClass }}</td>
+      <td>{{ pollutant.rfc }}</td>
+      <td>{{ pollutant.sf }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

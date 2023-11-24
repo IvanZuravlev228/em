@@ -1,0 +1,28 @@
+<div class="button-container">
+  <button class="show-button" (click)="getAllPollutionForShow()">Show all pollution</button>
+</div>
+
+<div class="table-container">
+  <table class="pollution-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Company Name</th>
+      <th>Pollutant Name</th>
+      <th>Value Pollution</th>
+      <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pollution of pollutionsForShow">
+      <td>{{ pollution.id }}</td>
+      <td class="company-name-column">{{ pollution.companyName }}</td>
+      <td class="pollutant-name-column">{{ pollution.pollutantName }}</td>
+      <td>{{ pollution.valuePollution }}</td>
+      <td>{{ pollution.year }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

@@ -1,0 +1,32 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollutant-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pollutant-table th, .pollutant-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.pollutant-table th {
+  background-color: #f2f2f2;
+}
+
+.pollutant-table tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Цвет для каждой второй строки */
+}
+
+/* Добавляем стили для колонки с именем */
+.name-column {
+  word-wrap: break-word;
+}
+
+

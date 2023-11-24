@@ -1,0 +1,31 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollution-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pollution-table th, .pollution-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.pollution-table th {
+  background-color: #f2f2f2;
+}
+
+/* Добавляем стили для колонок с именем компании и загрязнителя */
+.company-name-column, .pollutant-name-column {
+  word-wrap: break-word;
+}
+
+.pollution-table tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Цвет для каждой второй строки */
+}
+
