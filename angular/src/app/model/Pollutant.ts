@@ -5,6 +5,4 @@ export class Pollutant {
   maxMass: number = 0;
   gdk: number = 0;
   dangerClass: number = 0;
-  rfc: number = 0;
-  sf: number = 0;
 }
