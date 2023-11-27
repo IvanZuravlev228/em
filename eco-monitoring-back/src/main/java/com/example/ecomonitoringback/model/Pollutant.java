@@ -17,5 +17,4 @@ public class Pollutant {
     private Integer dangerClass;
     private Double rfc;
     private Double sf;
-    private String damage;
 }

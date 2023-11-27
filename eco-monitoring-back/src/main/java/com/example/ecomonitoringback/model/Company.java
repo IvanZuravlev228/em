@@ -13,6 +13,6 @@ public class Company {
     private String name;
     @Lob
     private String description;
-//    private String ownership;
-//    private String address;
+    private String ownership;
+    private String address;
 }
