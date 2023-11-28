@@ -1,0 +1,42 @@
+<app-navigator></app-navigator>
+
+<section class="select-container">
+  Company name
+  <select class="company-name" [(ngModel)]="companyIdForSearch" name="companyName" required>
+    <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
+  </select>
+
+  Year
+  <select class="company-name" [(ngModel)]="companyYearForSearch" name="companyName" required>
+    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+  </select>
+
+  <button (click)="showInformation()">show</button>
+</section>
+
+
+<div class="table-container">
+  <table>
+    <thead>
+    <tr>
+      <th>pollutant</th>
+      <th>value pollution</th>
+      <th>concentration</th>
+      <th>HQ</th>
+      <th>SF</th>
+      <th>UR</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pap of pollutionAndPollutant">
+      <td>{{ pap.pollutant.name }}</td>
+      <td>{{ pap.pollution.valuePollution }}</td>
+      <td>{{ pap.pollution.concentration }}</td>
+      <td>{{ pap.hq }}</td>
+      <td>{{ pap.pollutant.sf }}</td>
+      <td>{{ pap.ur.toFixed(4) }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

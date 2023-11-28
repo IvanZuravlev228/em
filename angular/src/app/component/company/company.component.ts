@@ -24,4 +24,23 @@ export class CompanyComponent {
       }
     })
   }
+
+  save() {
+    this.companyService.save(this.company).subscribe({
+      next: (company) => {
+        this.companies.push(company);
+        this.company = new Company();
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  }
+
+  canAddCompany(): boolean {
+    return this.company.name.length > 0
+      && this.company.description.length >= 0
+      && this.company.ownership.length > 0
+      && this.company.address.length > 0;
+  }
 }

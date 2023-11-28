@@ -22,6 +22,13 @@
       <td>{{ company.ownership }}</td>
       <td>{{ company.address }}</td>
     </tr>
+    <tr>
+      <td><button (click)="save()" *ngIf="canAddCompany()">add</button></td>
+      <td><input type="text" class="company-name" [(ngModel)]="company.name" [ngModelOptions]="{standalone: true}"></td>
+      <td><input type="text" class="company-description" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}"></td>
+      <td><input type="text" class="company-description" [(ngModel)]="company.ownership" [ngModelOptions]="{standalone: true}"></td>
+      <td><input type="text" class="company-description" [(ngModel)]="company.address" [ngModelOptions]="{standalone: true}"></td>
+    </tr>
     </tbody>
   </table>
 </div>

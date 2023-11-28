@@ -10,6 +10,7 @@
       <th>Company Name</th>
       <th>Pollutant Name</th>
       <th>Value Pollution</th>
+      <th>Concentration</th>
       <th>Year</th>
     </tr>
     </thead>
@@ -19,7 +20,30 @@
       <td class="company-name-column">{{ pollution.companyName }}</td>
       <td class="pollutant-name-column">{{ pollution.pollutantName }}</td>
       <td>{{ pollution.valuePollution }}</td>
+      <td>{{ pollution.concentration }}</td>
       <td>{{ pollution.year }}</td>
+    </tr>
+    <tr>
+      <td><button (click)="save()" *ngIf="canAddPollution()">add</button></td>
+      <td >
+        <select class="company-name" [(ngModel)]="pollutionForSave.companyName" name="companyName" required>
+        <option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</option>
+      </select>
+      </td>
+      <td >
+        <select class="company-description" [(ngModel)]="pollutionForSave.pollutantName" name="pollutantName" required>
+          <option *ngFor="let pollutant of pollutants" [value]="pollutant.name">{{ pollutant.name }}</option>
+        </select>
+      </td>
+      <td>
+        <input type="text" class="company-description" [(ngModel)]="pollutionForSave.valuePollution" [ngModelOptions]="{standalone: true}">
+      </td>
+      <td>
+        <input type="text" class="company-description" [(ngModel)]="pollutionForSave.concentration" [ngModelOptions]="{standalone: true}">
+      </td>
+      <td>
+        <input type="text" class="company-description" [(ngModel)]="pollutionForSave.year" [ngModelOptions]="{standalone: true}">
+      </td>
     </tr>
     </tbody>
   </table>

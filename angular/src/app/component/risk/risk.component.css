@@ -1,0 +1,38 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.select-container select, .select-container button {
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.table-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #eff0f5;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #c9ffae;
+}
+
+tr:hover {
+  background-color: #e8ffde;
+}
+
