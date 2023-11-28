@@ -16,4 +16,12 @@ export class CompanyService {
 
       }});
   }
+
+  save(company: Company) {
+    const body = JSON.stringify(company);
+    return this.http.post<Company>(environment.backendURL + "/companies", body, {
+      headers: {
+        "Content-Type": "application/json"
+      }});
+  }
 }

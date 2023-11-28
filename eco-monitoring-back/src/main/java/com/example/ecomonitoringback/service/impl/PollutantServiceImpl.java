@@ -33,4 +33,9 @@ public class PollutantServiceImpl implements PollutantService {
     public Pollutant findByName(String name) {
         return pollutantRepository.findByName(name);
     }
+
+    @Override
+    public Pollutant save(Pollutant pollutant) {
+        return pollutantRepository.save(pollutant);
+    }
 }

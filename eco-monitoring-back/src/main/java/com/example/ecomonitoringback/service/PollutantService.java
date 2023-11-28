@@ -12,4 +12,6 @@ public interface PollutantService {
     void saveAll(List<Pollutant> pollutants);
 
     Pollutant findByName(String name);
+
+    Pollutant save(Pollutant pollutant);
 }
