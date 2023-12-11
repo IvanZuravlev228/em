@@ -24,4 +24,11 @@ export class CompanyService {
         "Content-Type": "application/json"
       }});
   }
+
+  getById(id: number) {
+    return this.http.get<Company>(environment.backendURL + "/companies/" + id, {
+      headers: {
+
+      }});
+  }
 }

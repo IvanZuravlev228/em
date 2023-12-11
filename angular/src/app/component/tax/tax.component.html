@@ -1,0 +1,30 @@
+<app-navigator></app-navigator>
+
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th>company</th>
+      <th>value pollution</th>
+      <th>pollutant</th>
+      <th>avg pollution</th>
+      <th>norm pollution</th>
+      <th>timeH</th>
+      <th>tax coefficient</th>
+      <th><button (click)="sortTaxResultsByTax()" class="sort-button">tax</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tr of taxResults">
+      <td>{{ tr.companyName }}</td>
+      <td>{{ tr.valuePollution }}</td>
+      <td>{{ tr.pollutantName }}</td>
+      <td>{{ tr.avgPollution.toFixed(2) }}</td>
+      <td>{{ tr.normPollution }}</td>
+      <td>{{ tr.timeH }} hours</td>
+      <td>{{ tr.taxCoefficient < 0 ? 0 : tr.taxCoefficient.toFixed(2) }}</td>
+      <td>{{ tr.tax < 0 ? 0 : tr.tax.toFixed(2) }} ₴</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -17,4 +17,8 @@ export class NavigatorComponent {
   toRisk() {
     this.router.navigate(['/risk']);
   }
+
+  toTax() {
+    this.router.navigate(['/tax']);
+  }
 }
