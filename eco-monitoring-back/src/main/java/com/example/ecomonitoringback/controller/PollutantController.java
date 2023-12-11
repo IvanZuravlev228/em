@@ -25,9 +25,14 @@ public class PollutantController {
         return new ResponseEntity<>(pollutantService.getAll(), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/all")
     public ResponseEntity<Void> saveAll(@RequestBody List<Pollutant> pollutants) {
         pollutantService.saveAll(pollutants);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping
+    public  ResponseEntity<Pollutant> save(@RequestBody Pollutant pollutant) {
+        return new ResponseEntity<>(pollutantService.save(pollutant), HttpStatus.OK);
     }
 }

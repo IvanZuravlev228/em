@@ -29,3 +29,13 @@
   background-color: #f9f9f9; /* Цвет для каждой второй строки */
 }
 
+
+
+
+.company-name {
+  max-width: 200px;
+}
+
+.company-description {
+  max-width: 200px;
+}

@@ -8,5 +8,6 @@ public class PollutionShowResponseDto {
     private String companyName;
     private String pollutantName;
     private Double valuePollution;
+    private Double concentration;
     private Integer year;
 }

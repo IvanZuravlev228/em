@@ -18,4 +18,14 @@ public class CompanyController {
     public ResponseEntity<List<Company>> getAll() {
         return new ResponseEntity<>(companyService.getAll(), HttpStatus.OK);
     }
+
+    @PostMapping
+    public ResponseEntity<Company> save(@RequestBody Company company) {
+        return new ResponseEntity<>(companyService.save(company), HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Company> getById(@PathVariable Long id) {
+        return new ResponseEntity<>(companyService.getById(id), HttpStatus.OK);
+    }
 }

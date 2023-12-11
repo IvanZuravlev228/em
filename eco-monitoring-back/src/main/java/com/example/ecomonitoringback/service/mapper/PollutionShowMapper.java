@@ -19,6 +19,7 @@ public class PollutionShowMapper {
         dto.setPollutantName(pollution.getPollutant().getName());
         dto.setCompanyName(pollution.getCompany().getName());
         dto.setValuePollution(pollution.getValuePollution());
+        dto.setConcentration(pollution.getConcentration());
         dto.setYear(pollution.getYear());
         return dto;
     }
@@ -28,6 +29,7 @@ public class PollutionShowMapper {
         model.setPollutant(pollutantService.findByName(dto.getPollutantName()));
         model.setCompany(companyService.findByName(dto.getCompanyName()));
         model.setValuePollution(dto.getValuePollution());
+        model.setConcentration(dto.getConcentration());
         model.setYear(dto.getYear());
         return model;
     }
