@@ -1,40 +1,13 @@
 <div class="button-container">
   <button class="show-button" (click)="getAllCompanies()">Show all companies</button>
+
 </div>
+<input type="text" class="search-input" [(ngModel)]="searchCompanyBy" [ngModelOptions]="{standalone: true}">
+<button class="search-button" (click)="searchCompany()">search</button>
 
-
-<!--<div class="table-container">-->
-<!--  <table class="company-table">-->
-<!--    <thead>-->
-<!--    <tr>-->
-<!--      <th>ID</th>-->
-<!--      <th>Name</th>-->
-<!--      <th>Description</th>-->
-<!--      <th>Ownership</th>-->
-<!--      <th>Address</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--    <tr *ngFor="let company of companies">-->
-<!--      <td>{{ company.id }}</td>-->
-<!--      <td>{{ company.name }}</td>-->
-<!--      <td>{{ company.description }}</td>-->
-<!--      <td>{{ company.ownership }}</td>-->
-<!--      <td>{{ company.address }}</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td><button (click)="save()" *ngIf="canAddCompany()">add</button></td>-->
-<!--      <td><input type="text" class="company-name" [(ngModel)]="company.name" [ngModelOptions]="{standalone: true}"></td>-->
-<!--      <td><input type="text" class="company-description" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}"></td>-->
-<!--      <td><input type="text" class="company-description" [(ngModel)]="company.ownership" [ngModelOptions]="{standalone: true}"></td>-->
-<!--      <td><input type="text" class="company-description" [(ngModel)]="company.address" [ngModelOptions]="{standalone: true}"></td>-->
-<!--    </tr>-->
-<!--    </tbody>-->
-<!--  </table>-->
-<!--</div>-->
 
 <section>
-  <div *ngFor="let company of companies">
+  <div *ngFor="let company of companiesForShow">
     <form (ngSubmit)="update(company)" class="update-form">
       <div>
 

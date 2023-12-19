@@ -11,10 +11,10 @@ import {Pollution} from "../../model/Pollution";
   styleUrls: ['./fine.component.css']
 })
 export class FineComponent {
-  fineResults: FineResult[] = [];
   years: string[] = ["all", "2016", "2017", "2018", "2019", "2020", "2021"];
   companyYearForSearch: string = "all";
   fineResultsForShow: FineResult[] = [];
+  fineResults: FineResult[] = [];
 
   constructor(private companyService: CompanyService,
               private pollutantService: PollutantService,
@@ -91,7 +91,6 @@ export class FineComponent {
                 taxForTemporaryStorageOfRadioactiveWaste: pollution.valuePollution * pollutant.taxRatesForTemporaryStorageOfRadioactiveWaste,
                 year: pollution.year.toString()
               }
-              console.log(fineResult);
               this.fineResults.push(fineResult);
             },
             error: (error) => {

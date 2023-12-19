@@ -8,8 +8,11 @@ import {CompanyService} from "../../service/company.service";
   styleUrls: ['./company.component.css', '../../style/show-button.css']
 })
 export class CompanyComponent {
+  companiesForShow: Company[] = [];
   companies: Company[] = [];
   company: Company = new Company();
+  searchCompanyBy: string = "";
+
 
   constructor(private companyService: CompanyService) {
   }
@@ -18,6 +21,7 @@ export class CompanyComponent {
     this.companyService.getAllCompany().subscribe({
       next: (companies) => {
         this.companies = companies;
+        this.companiesForShow = companies;
       },
       error: (error) => {
         console.log(error);
@@ -64,5 +68,18 @@ export class CompanyComponent {
         console.log(error);
       }
     })
+  }
+
+  searchCompany() {
+    console.log(this.searchCompanyBy);
+    this.companies.forEach(company => {
+      console.log(company.name);
+      console.log(company.name == this.searchCompanyBy);
+    })
+    this.companiesForShow = this.companies.filter(company =>
+      company.name.toLowerCase().includes(this.searchCompanyBy.toLowerCase())
+    );
+    console.log(this.companies);
+    console.log(this.companiesForShow);
   }
 }

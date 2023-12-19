@@ -52,7 +52,8 @@ export class RiskComponent implements OnInit{
                   pollution: pollution,
                   pollutant: pollutant,
                   hq: pollution.concentration / pollutant.rfc,
-                  ur: Math.pow(pollutant.sf, -1) / (this.standard_value_of_human_body_weight * this.daily_air_consumption)
+                  ur: Math.pow(pollutant.sf, -1) / (this.standard_value_of_human_body_weight * this.daily_air_consumption),
+                  risk: this.getRisk(Math.pow(pollutant.sf, -1) / (this.standard_value_of_human_body_weight * this.daily_air_consumption))
                 }
                 this.pollutionAndPollutant.push(pollutionAndPollutant);
               },
@@ -66,5 +67,18 @@ export class RiskComponent implements OnInit{
         console.log(error);
       }
     })
+  }
+
+  getRisk(ur: number):string {
+    if (ur > Math.pow(10, -3)) {
+      return "Високий";
+    }
+    if (ur >= Math.pow(10, -3) && ur <= Math.pow(10, -4)) {
+      return "Середній";
+    }
+    if (ur > Math.pow(10, -4) && ur <= Math.pow(10, -6)) {
+      return "Низький";
+    }
+    return "Мінімальний";
   }
 }

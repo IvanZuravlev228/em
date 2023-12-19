@@ -6,4 +6,5 @@ export class PollutionAndPollutant {
   pollutant: Pollutant = new Pollutant();
   hq: number = -1;
   ur: number = -1;
+  risk: string = "";
 }
