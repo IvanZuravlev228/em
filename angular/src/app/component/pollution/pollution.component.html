@@ -2,6 +2,7 @@
   <button class="show-button" (click)="getAllPollutionForShow()">Show all pollution</button>
 </div>
 
+
 <div class="table-container">
   <table class="pollution-table">
     <thead>
@@ -12,6 +13,7 @@
       <th>Value Pollution</th>
       <th>Concentration</th>
       <th>Year</th>
+      <th>Organs</th>
     </tr>
     </thead>
     <tbody>
@@ -22,6 +24,7 @@
       <td>{{ pollution.valuePollution }}</td>
       <td>{{ pollution.concentration }}</td>
       <td>{{ pollution.year }}</td>
+      <td>{{ pollution.organs }}</td>
     </tr>
     <tr>
       <td><button (click)="save()" *ngIf="canAddPollution()">add</button></td>

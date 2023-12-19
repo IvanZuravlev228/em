@@ -43,4 +43,26 @@ export class CompanyComponent {
       && this.company.ownership.length > 0
       && this.company.address.length > 0;
   }
+
+  update(company: Company) {
+    this.companyService.update(company.id, company).subscribe({
+      next: (updatedTask) => {
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  }
+
+  deleteCompany(id: number) {
+    this.companyService.deleteById(id).subscribe({
+      next: () => {
+        const index = this.companies.findIndex(comp => comp.id === id);
+        this.companies.splice(index, 1);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  }
 }

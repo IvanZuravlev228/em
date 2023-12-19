@@ -21,6 +21,7 @@ public class PollutionShowMapper {
         dto.setValuePollution(pollution.getValuePollution());
         dto.setConcentration(pollution.getConcentration());
         dto.setYear(pollution.getYear());
+        dto.setOrgans(pollution.getPollutant().getOrgans());
         return dto;
     }
 

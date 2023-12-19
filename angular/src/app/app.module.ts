@@ -12,6 +12,7 @@ import { PollutantComponent } from './component/pollutant/pollutant.component';
 import { RiskComponent } from './component/risk/risk.component';
 import { NavigatorComponent } from './component/navigator/navigator.component';
 import { TaxComponent } from './component/tax/tax.component';
+import { FineComponent } from './component/fine/fine.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TaxComponent } from './component/tax/tax.component';
     PollutantComponent,
     RiskComponent,
     NavigatorComponent,
-    TaxComponent
+    TaxComponent,
+    FineComponent
   ],
   imports: [
     BrowserModule,

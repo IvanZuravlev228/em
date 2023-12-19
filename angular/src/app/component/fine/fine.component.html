@@ -1,0 +1,37 @@
+<app-navigator></app-navigator>
+
+<div class="choose-year">
+  <select class="company-name" [(ngModel)]="companyYearForSearch" name="companyName" required>
+    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+  </select>
+  <button (click)="search()">search</button>
+</div>
+
+<section>
+  <table>
+    <thead>
+    <tr>
+      <th>company</th>
+      <th>pollution</th>
+      <th>pollution</th>
+      <th><button (click)="sort1()" class="sort-button">stationary sources</button></th>
+      <th><button (click)="sort2()" class="sort-button">discharges to water bodies</button></th>
+      <th><button (click)="sort3()" class="sort-button">waste disposal</button></th>
+      <th><button (click)="sort4()" class="sort-button">the generation of radioactive waste</button></th>
+      <th><button (click)="sort5()" class="sort-button">temporary storage of radioactive waste</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let fr of fineResultsForShow">
+      <td>{{ fr.companyName ? fr.companyName : "?" }}</td>
+      <td>{{ fr.pollutionName ? fr.pollutionName : "?" }}</td>
+      <td>{{ fr.pollutionValue ? fr.pollutionValue : "?" }}</td>
+      <td>{{ fr.taxForStationarySources ? fr.taxForStationarySources.toFixed(2) : "?" }}</td>
+      <td>{{ fr.taxForDischargesToWaterBodies ? fr.taxForDischargesToWaterBodies.toFixed(2) : "?" }}</td>
+      <td>{{ fr.taxForWasteDisposal ? fr.taxForWasteDisposal.toFixed(2) : "?" }}</td>
+      <td>{{ fr.taxForTheGenerationOfRadioactiveWaste ? fr.taxForTheGenerationOfRadioactiveWaste.toFixed(2) : "?" }}</td>
+      <td>{{ fr.taxForTemporaryStorageOfRadioactiveWaste ? fr.taxForTemporaryStorageOfRadioactiveWaste.toFixed(2) : "?" }}</td>
+    </tr>
+    </tbody>
+  </table>
+</section>

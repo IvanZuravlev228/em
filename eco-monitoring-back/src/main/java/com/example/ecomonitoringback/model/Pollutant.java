@@ -17,4 +17,10 @@ public class Pollutant {
     private Integer dangerClass;
     private Double rfc;
     private Double sf;
+    private String organs;
+    private Double taxRatesByStationarySources;
+    private Double taxRatesForDischargesToWaterBodies;
+    private Double taxRatesForWasteDisposal;
+    private Double taxRatesForTheGenerationOfRadioactiveWaste;
+    private Double taxRatesForTemporaryStorageOfRadioactiveWaste;
 }

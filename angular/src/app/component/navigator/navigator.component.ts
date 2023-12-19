@@ -21,4 +21,8 @@ export class NavigatorComponent {
   toTax() {
     this.router.navigate(['/tax']);
   }
+
+  toFine() {
+    this.router.navigate(['/fine']);
+  }
 }

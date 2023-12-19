@@ -1,31 +1,81 @@
-.table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*.table-container {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.company-table {*/
+/*  width: 70%;*/
+/*  border-collapse: collapse;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*.company-table th, .company-table td {*/
+/*  border: 1px solid #ddd;*/
+/*  padding: 8px;*/
+/*  text-align: left;*/
+/*}*/
+
+/*.company-table th {*/
+/*  background-color: #f2f2f2;*/
+/*}*/
+
+/*.company-table tr:nth-child(odd) {*/
+/*  background-color: #f9f9f9; !* Цвет для каждой второй строки *!*/
+/*}*/
+
+/*!* Добавляем стили для колонки с именем *!*/
+/*.name-column {*/
+/*  word-wrap: break-word;*/
+/*}*/
+
+
+/* Общий стиль секции */
+section {
+  margin: 20px;
 }
 
-.company-table {
-  width: 70%;
-  border-collapse: collapse;
-  margin-top: 20px;
+/* Стиль формы обновления */
+.update-form {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.company-table th, .company-table td {
-  border: 1px solid #ddd;
+/* Стиль для каждого инпута */
+.update-input {
+  width: 100%;
   padding: 8px;
-  text-align: left;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
-.company-table th {
-  background-color: #f2f2f2;
+/* Стиль кнопок */
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.company-table tr:nth-child(odd) {
-  background-color: #f9f9f9; /* Цвет для каждой второй строки */
+/* Стиль кнопки обновления */
+.update-button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Добавляем стили для колонки с именем */
-.name-column {
-  word-wrap: break-word;
+/* Стиль кнопки удаления */
+.submit-button {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 

@@ -28,4 +28,15 @@ public class CompanyController {
     public ResponseEntity<Company> getById(@PathVariable Long id) {
         return new ResponseEntity<>(companyService.getById(id), HttpStatus.OK);
     }
+
+    @PutMapping("/{prevId}")
+    public ResponseEntity<Company> update(@PathVariable Long prevId, @RequestBody Company newCompany) {
+        return new ResponseEntity<>(companyService.update(prevId, newCompany), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+        companyService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }

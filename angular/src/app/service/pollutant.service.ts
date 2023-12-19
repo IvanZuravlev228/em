@@ -33,4 +33,11 @@ export class PollutantService {
         "Content-Type": "application/json"
       }});
   }
+
+  getById(id: number) {
+    return this.http.get<Pollutant>(environment.backendURL + "/pollutant/" + id, {
+      headers: {
+
+      }});
+  }
 }

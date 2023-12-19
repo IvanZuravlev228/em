@@ -10,4 +10,5 @@ public class PollutionShowResponseDto {
     private Double valuePollution;
     private Double concentration;
     private Integer year;
+    private String organs;
 }
